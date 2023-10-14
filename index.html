@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Página Protegida</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        form {
+            background-color: #333;
+            padding: 20px;
+            border-radius: 10px;
+            width: 300px;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: none;
+            background-color: #444;
+            color: #fff;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #555;
+            border: none;
+            color: #fff;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #666;
+        }
+        p {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+	<h1>Ingresa la contraseña para acceder:</h1>
+	
+    <form id="password-form">
+        <input type="password" id="password" placeholder="Contraseña">
+        <button type="button" onclick="checkPassword()">Ingresar</button>
+    </form>
+
+    <p id="message"></p>
+
+    <script>
+        function checkPassword() {
+            var password = document.getElementById("password").value;
+            if (password === "dos14816") {
+                window.location.href = "B.html";
+            } else {
+                document.getElementById("message").innerHTML = "Contraseña incorrecta. Inténtalo de nuevo.";
+            }
+        }
+    </script>
+</body>
+</html>
